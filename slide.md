@@ -87,6 +87,10 @@
 ```ruby
 # 引数が1つの時はそのまま配列を受け取る
 proc { |a| [a] }.call [1, 2] # => [[1, 2]]
+```
+<!-- .element: class="fragment" -->
+
+```ruby
 # 引数が1つの時は配列を展開して受け取る
 proc { |a, b| [a, b] }.call [1, 2] # => [1, 2]
 ```
@@ -185,7 +189,7 @@ proc { _1 }.call 42
 ---
 
 
-## 3. _1 と binding.irb の組み合わせ
+## 3. binding.irb の組み合わせ
 
 ---
 
@@ -195,7 +199,7 @@ proc {
   _1
 }.call 42
 ```
-
+<!-- .element: class="fragment" -->
 
 ```ruby
 irb> _1
@@ -209,8 +213,7 @@ irb> (1..10).map { _1 + _1 }
 ```
 <!-- .element: class="fragment" -->
 
-
-## _1 を使ったコンテキストで irb を使用すると _1 が全て外の _1 を参照する
+* _1 を使ったコンテキストで irb を使用すると _1 が全て外の _1 を参照する <!-- .element: class="fragment" -->
 
 ---
 
